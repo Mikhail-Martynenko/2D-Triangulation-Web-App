@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/2D-Triangulation-Web-App/static/css/main.88888160.css",
+    "main.js": "/2D-Triangulation-Web-App/static/js/main.42ddc39f.js",
+    "index.html": "/2D-Triangulation-Web-App/index.html",
+    "main.88888160.css.map": "/2D-Triangulation-Web-App/static/css/main.88888160.css.map",
+    "main.42ddc39f.js.map": "/2D-Triangulation-Web-App/static/js/main.42ddc39f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.88888160.css",
+    "static/js/main.42ddc39f.js"
+  ]
+}
