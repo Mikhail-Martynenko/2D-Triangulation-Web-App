@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {inputSlice} from "../../store/reduces/slice";
+import {inputSlice} from "../../store/reducers/slice";
 import TextArea from "antd/es/input/TextArea";
 import {Button, Modal} from "antd";
 const InputCustom = () => {
@@ -27,19 +27,20 @@ const InputCustom = () => {
     }
     return (
         <form>
-            <TextArea
-                value={state}
-                onChange={e => {
-                    if (!regexp.test(e.target.value)) setState(e.target.value)
-                }}
-                type='text'
-                placeholder="Введите массив точек"
-                autoSize={{
-                    minRows: 2,
-                    maxRows: 6,
-                }}
+            <TextArea allowClear
+                      value={state}
+                      onChange={e => {
+                          if (!regexp.test(e.target.value)) setState(e.target.value)
+                      }}
+                      type='text'
+                      placeholder="Введите массив точек"
+                      autoSize={{
+                          minRows: 2,
+                          maxRows: 6,
+                      }}
             />
-            <Button style={{top: "20px"}} type="primary" onClick={setArrButton}>Установить массив для триангуляции</Button>
+            <Button style={{top: "20px"}} type="primary" onClick={setArrButton}>Установить массив для
+                триангуляции</Button>
         </form>
     );
 };

@@ -1,35 +1,26 @@
-import React, {useState} from "react";
+import React from "react";
 import "./App.css"
-import D3Delaunay from "./components/D3-delaunay";
-import Earcut from "./components/Earcut";
 import {useSelector} from "react-redux";
 import InputCustom from "./components/UI/InputCustom";
-import {Col, Progress, Radio, Row, Space} from "antd";
+import {Col, Progress, Row, Space} from "antd";
 import Links from "./components/Links";
+import FloatButtonWithModalWindow from "./components/UI/FloatButtonWithModalWindow";
+import TriangulationSelection from "./components/UI/TriangulationSelection";
 function App() {
     const {meshQualityState} = useSelector(state => state.inputReducer)
-    const [value, setValue] = useState(1);
     return (
         <div className='App'>
             <Row>
-                <Col xs span={24} style={{textAlign: "center"}}><h1>2D-Triangulation App</h1></Col>
+                <Col xs span={24} style={{textAlign: "center"}}><h1 style={{marginBottom: "10px"}}>2D-Triangulation Web App</h1></Col>
             </Row>
+            <hr/>
             <Row>
                 <Col xs span={12}>
                     <canvas id="canvas" width="640" height="480"></canvas>
                 </Col>
                 <Col xs span={12}>
                     <InputCustom/>
-                    <h1>Выберите метод триангуляции</h1>
-                    <Radio.Group style={{padding: "25px"}} onChange={e => setValue(e.target.value)} value={value}>
-                        <Radio value={1}><h3>D3-delaunay</h3></Radio>
-                        <Radio value={2}><h3>Earcut</h3></Radio>
-                    </Radio.Group>
-                    {
-                        value === 1
-                            ? <D3Delaunay/>
-                            : <Earcut/>
-                    }
+                    <TriangulationSelection/>
                     <Space wrap>
                         <Progress style={{padding: "50px"}} type="circle" percent={meshQualityState.percent}/>
                         <h2>{meshQualityState.text}</h2>
@@ -38,6 +29,8 @@ function App() {
             </Row>
             <Row>
                 <Col xs span={8}><Links/></Col>
+                <Col xs span={8}></Col>
+                <Col xs span={8}><FloatButtonWithModalWindow/></Col>
             </Row>
         </div>
     );

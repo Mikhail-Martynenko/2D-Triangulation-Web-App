@@ -1,9 +1,9 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {inputSlice} from "../store/reduces/slice";
+import {inputSlice} from "../../../store/reducers/slice";
 import {Delaunay} from "d3-delaunay";
-import ScalingMesh from "../scaling_mesh";
-import MeshQuality from "../mesh_quality";
+import ScalingMesh from "../../../scaling_mesh";
+import MeshQuality from "../../../mesh_quality";
 import {Button} from 'antd';
 const D3Delaunay = () => {
     const dispatch = useDispatch()
@@ -49,7 +49,6 @@ const D3Delaunay = () => {
         const meshQuality = new MeshQuality()
         const resultPoints = scalingMesh.scale(JSON.parse(exampleFigure));
         triangulationDelaunay(resultPoints);
-        // dispatch(setArrayForMesh(arrCoordinatesVerticesTriangle));
         const [str, percent] = meshQuality.renderStatistics(arrCoordinatesVerticesTriangle)
         dispatch(setMeshQualityForFigure([str, percent]))
     }
