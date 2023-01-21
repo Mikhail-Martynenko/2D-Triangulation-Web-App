@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/2D-Triangulation-Web-App/static/css/main.d7b62702.css",
+    "main.css": "/2D-Triangulation-Web-App/static/css/main.49611b77.css",
     "main.js": "/2D-Triangulation-Web-App/static/js/main.e88c1937.js",
     "index.html": "/2D-Triangulation-Web-App/index.html",
-    "main.d7b62702.css.map": "/2D-Triangulation-Web-App/static/css/main.d7b62702.css.map",
+    "main.49611b77.css.map": "/2D-Triangulation-Web-App/static/css/main.49611b77.css.map",
     "main.e88c1937.js.map": "/2D-Triangulation-Web-App/static/js/main.e88c1937.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7b62702.css",
+    "static/css/main.49611b77.css",
     "static/js/main.e88c1937.js"
   ]
 }
