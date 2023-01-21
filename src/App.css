@@ -1,6 +1,13 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
 body {
     background-color: aliceblue;
 }
+
 hr {
     height: 10px;
     margin: 10px auto;
@@ -9,6 +16,7 @@ hr {
     position: relative;
     border: none;
 }
+
 hr:before {
     height: 1px;
     position: absolute;
