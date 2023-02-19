@@ -1,6 +1,6 @@
 <div id="header" align="center">
 
-  # Web-приложение для триангуляци 2D-фигур
+  # Web-приложение для триангуляции 2D-фигур
 
   <img src="https://media.giphy.com/media/l8yZINEDzUOBUPBlDr/giphy.gif" width="250"/>
   
