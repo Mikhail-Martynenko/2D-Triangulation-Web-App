@@ -2,9 +2,10 @@ import React from 'react';
 import earcut from "earcut";
 import {useDispatch, useSelector} from "react-redux";
 import {inputSlice} from "../../../store/reducers/slice";
-import ScalingMesh from "../../../scaling_mesh";
-import MeshQuality from "../../../mesh_quality";
+import ScalingMesh from "../../../scalingMesh";
+import MeshQuality from "../../../meshQuality";
 import {Button} from "antd";
+
 const Earcut = () => {
     const dispatch = useDispatch()
     const {exampleFigure} = useSelector(state => state.inputReducer)
