@@ -1,11 +1,8 @@
-// Вычисление качества триангуляционной сетки
 export default class MeshQuality {
     renderStatistics(points) {
-        //const arrIndexTriangles = [];
         let str = '';
         let percent = 0;
 
-        // Подсчёт длин сторон треугольника по трём вершинам
         function calcLengthSidesTriangles(arrCoordinatesVerticesTriangle) {
 
             let a, b, c;
@@ -21,16 +18,12 @@ export default class MeshQuality {
         }
 
         function calсQualityMesh(arr) {
-            // Создаём новый массив с результатами вычисления по формуле - ((maxSide - minSide) / maxSide) * 100
-
             const newArr = arr.map(elementArr =>
                 Math.round(((Math.max.apply(null, elementArr) - Math.min.apply(null, elementArr)) / Math.max.apply(null, elementArr)) * 100)
             )
             const initialValue = 0;
-            // сумма всех элементов в массиве
             const sumElementsArr = newArr.reduce((previousValue, currentValue) => previousValue + currentValue, initialValue);
 
-            // считаем среднее
             let mean = sumElementsArr / newArr.length;
             percent = Math.round(mean);
             if (mean <= 100 && mean >= 90) {
@@ -46,7 +39,6 @@ export default class MeshQuality {
 
         calcLengthSidesTriangles(points)
         return [str, percent];
-
     }
 }
 

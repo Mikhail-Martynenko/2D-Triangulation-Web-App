@@ -2,9 +2,10 @@ import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {inputSlice} from "../../../store/reducers/slice";
 import {Delaunay} from "d3-delaunay";
-import ScalingMesh from "../../../scaling_mesh";
-import MeshQuality from "../../../mesh_quality";
+import ScalingMesh from "../../../scalingMesh";
+import MeshQuality from "../../../meshQuality";
 import {Button} from 'antd';
+
 const D3Delaunay = () => {
     const dispatch = useDispatch()
     const {exampleFigure} = useSelector(state => state.inputReducer)
@@ -34,7 +35,6 @@ const D3Delaunay = () => {
             context.moveTo(points[t0 * 2], points[t0 * 2 + 1]);
             context.lineTo(points[t1 * 2], points[t1 * 2 + 1]);
             context.lineTo(points[t2 * 2], points[t2 * 2 + 1]);
-            // Рандомный цвет треугольников
             context.fillStyle = `rgba(${Math.random() * 255},${Math.random() * 255},${Math.random() * 255}, 0.5)`;
             context.strokeStyle = 'black';
             context.fill();
